@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body{
+      background-color: grey;
+    }
+    .box {
+      border-radius: 100%;
+      width: 100px;
+      height: 100px;
+      background-color: coral;
+      position: relative;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        top: 0;
+      }
+      50% {
+        top: 100px;
+      }
+    }
+    
+    .element{
+      margin-top: 100px;
+      width: 200px;
+      height: 100px;
+      background-color: #006400;
+      position: relative;
+      animation: gradient 3s infinite ease-out alternate running;
+    }
+    @keyframes gradient{
+      25%{
+        transform: translate(150px, 0);
+        background-color: #007a00 ;
+      }
+      50%{
+        transform: translate(150px, 0);
+        background-color: #00a300 ;
+      }
+      75%{
+        transform: translate(150px, 0);
+        background-color: #00cc00 ;
+      }
+      0%, 100%{
+        transform: translate(0, 0);
+        background-color: #00ff00 ;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="element"></div>
+</body>
+</html>

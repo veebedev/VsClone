@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS CLone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                graay: '#0D1117',  
+                whitee: '#C3D0E5',
+                graay2: '#161A20',
+                gray: '#3c3c3c',
+                graay3: '#333940',
+              },
+            fontFamily: {
+                sans: ['Poppins', 'sans-serif'],
+            },
+              spacing: {
+                '72': '18rem',
+                '84': '21rem',
+                '96': '24rem',
+              },
+            },
+          },
+        }
+    </script>
+</head>
+<body class="text-whitee bg-graay max-w-1200px lg:px-60">
+    <div class="sticky top-0 bg-graay flex justify-between border-l-[#333] p-3">
+        <div class="flex gap-5">
+            <img src="https://code.visualstudio.com/favicon.ico" width="30" height="10" class="logo" /> <br>
+            <span class="text-lg font-bold"> Visual Studio Code</span>
+            <span><a href="">Docs</a></span>
+            <span><a href="">Updates</a></span>
+            <span><a href="">Blog</a></span>
+            <span><a href="">API</a></span>
+            <span><a href="">Extensions</a></span>
+            <span><a href="#">Contact</a></span>
+        </div>
+        <div>
+            <span><input class="bg-graay border-solid text-white px-4 py-2  text-sm" placeholder="Search..." type="text"></span>
+            <span><button class="bg-blue-600 text-white py-1 px-3 rounded hover:bg-blue-700">Download</button></span>
+        </div>
+    </div>
+   
+    <main>
+        <section class="text-center">
+            <h1 class="text-6xl font-bold">Your code editor. </h1>
+            <h1 class="text-6xl font-bold">Redefined with AI.</h1>
+            <div>
+                <button class="bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-700" >
+                    Download for Windows
+                </button>
+                <button class="bg-graay3 border-dotted-1 text-white py-1 px-3 rounded hover:bg-gray" >
+                    Try Agent Mode
+                </button>
+            </div>                
+            <div class="">
+                <a class="text-blue-400 text-xs underline decoration-solid " href="">Web</a>, 
+                <a class="text-blue-400 text-xs underline decoration-solid " href="">Insiders</a>
+            </div>
+        </section>
+
+        <section class="text-left">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-graay2 border-1-solid-white p-4 ">
+                    <h3 class="text-2xl font-semibold">Any model for any team</h3>
+                    <p>Use AI models like Claude Sonnet out of the box, or bring your own key to access models from Azure, Anthropic, Google, Ollama, OpenAI, and OpenRouter.</p>
+                    <img src="https://code.visualstudio.com/assets/home/choose-model-dark.webp" alt="">
+                </div>
+                <div class="bg-graay2 border-solid p4">
+                    <h3 class="text-2xl font-semibold">An expert on your codebase</h3>
+                    <p>Your codebase is indexed locally and remotely (on GitHub) to understand what's relevant, enabling fast, context-aware interactions.</p>
+                    <img src="https://code.visualstudio.com/assets/home/an-expert-on-your-codebase-dark.webp" alt="">
+                </div>
+                <div class="bg-graay2 rounded p4">
+                    <h3 class="text-2xl font-semibold">AI that works the way your team does</h3>
+                    <p>Personalize interactions using custom instructions and reusable prompt files tailored to your workflows, tools, and projects.</p>
+                    <img src="https://code.visualstudio.com/assets/home/instructions-dark.webp" alt="">
+                </div>
+            </div>
+        </section> 
+
+        <div class="flex text-left">
+            <div class="">
+                <h2>Agent mode</h2><br>
+                <p>Tackle complex, multi-step tasks. Agent mode reads your codebase, suggests edits across files, runs terminal commands, and responds to compile or test failures — all in a loop until the job is done. Further refine agent mode to fit your team's workflows with VS Code extensions and Model Context Protocol (MCP) servers.</p>
+                <a class="ulink" href="">Build with agent mode</a>
+            </div>
+            <div ><img class="big-img" src="https://code.visualstudio.com/assets/home/swimlane-chat-dark.webp" alt=""></div>
+        </div>
+
+        <div class="efeatures">
+            <div class="ftext">
+                <h2>Next Edit Suggestions</h2><br>
+                <p>VS Code predicts your next move as you code. Use the Tab key to accept AI-powered suggestions right in your editor. It intelligently recommends what to change — and where — based on the edits you're already making.</p>
+                <a class="ulink" href="">Code with AI-powered suggestions</a>
+            </div>
+            <div ><img class="big-img"src="https://code.visualstudio.com/assets/home/swimlane-nes-dark.webp" alt=""></div>
+        </div>
+
+        <section class="language">
+            <div class="container">
+                <h2>Code in any language</h2>
+                <p>VS Code supports almost every major programming language. Several ship in the box, like JavaScript,
+                    TypeScript, CSS, and HTML, but extensions for others can be found in the VS Code Marketplace.</p>
+                <div class="language_panel">
+                    <img src="https://code.visualstudio.com/assets/home/language-js.png" alt="Javascript">
+                    <code>JavaScript</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-ts.png" alt="TypeScript">
+                    <code>TypeScript</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-python.png" alt="Python">
+                    <code>Python</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-cs.png" alt="C#">
+                    <code>C#</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-cpp.png" alt="C++">
+                    <code>C++</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-html.png" alt="HTML">
+                    <code>HTML</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-java.png" alt="Java">
+                    <code>Java</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-json.png" alt="JSON">
+                    <code>JSON</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-php.png" alt="PHP">
+                    <code>PHP</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-markdown.png" alt="Markdown">
+                    <code>Markdown</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-powershell.png" alt="Powershell">
+                    <code>Powershell</code>
+                    <img src="https://code.visualstudio.com/assets/home/language-yaml.png" alt="YAML">
+                    <code>YAML</code>
+                </div>
+            </div>
+        </section>
+
+        <div class="efeatures">
+            <div class="ftext">
+                <h2>Fully customizable</h2><br>
+                <p>Customize your VS Code UI and layout so that it fits your coding style.</p>
+                <br><p><a class="ulink">Color Themes</a> let you modify the colors in VS Code's user interface to suit your preferences and work environment.</p>
+                <br><p><a class="ulink" href="">Settings Sync</a> enables you to share your user settings across your VS Code instances with the Settings Sync feature.</p>
+            </div>
+            <div ><img class="big-img" src="https://code.visualstudio.com/assets/home/swimlane-customized.png" alt=""></div>
+        </div>
+
+        <div class="efeatures">
+            <div class="ftext">
+                <h2>Code anywhere</h2><br>
+                <p>Code wherever you're most productive, whether you're connected to the cloud, a remote repository, or in the browser with VS Code for the Web (vscode.dev).</p>
+                <br><p><a class="ulink">Built-in Source Control</a>empowers you with Git support out-of-the-box. Many other source control providers are available through extensions.</p>
+                <br><p><a class="ulink" href="">GitHub Codespaces </a>  provides cloud-powered development environments for any activity - whether it's a long-term project, or a short-term task like reviewing a pull request.</p>
+            </div>
+            <div >
+                <img class="big-img" src="https://code.visualstudio.com/assets/home/swimlane-anywhere.png" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="text-center sm:flex justify-start gap-3 text-sm">
+            <div>support </div>
+            <div>privacy </div>
+            <div>terms of use </div> 
+            <div>License </div>  
+        </div>
+        <br><br>
+    </footer>
+</body>
+</html>
