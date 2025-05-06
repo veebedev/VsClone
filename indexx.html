@@ -23,36 +23,41 @@
             },
           },
         }
+        
     </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="text-whitee bg-graay ">
-    <div class="sticky top-0 bg-graay flex justify-between border-b border-[#333] p-3 lg:px-20 2xl:px-60">
-        <div class="flex gap-5 pt-1.5">
-            <img class="w-7 h-7" src="https://code.visualstudio.com/favicon.ico"/>
-            <span class="text-lg font-bold"> Visual Studio Code</span>
-            <span><a href="">Docs</a></span>
-            <span><a href="">Updates</a></span>
-            <span><a href="">Blog</a></span>
-            <span><a href="">API</a></span>
-            <span><a href="">Extensions</a></span>
-            <span><a href="#">Contact</a></span>
+    <div class="sticky top-0 bg-graay flex flex-col justify-between border-b border-[#333] p-3 lg:px-20 lg:flex-row 2xl:px-60">
+        <div class="flex gap-5">
+            <div class="flex gap-5 pt-1.5">
+                <img class="w-5 h-5" src="https://code.visualstudio.com/favicon.ico"/>
+                <span class="text-md font-bold"> Visual Studio Code</span>
+            </div>
+            <div class="hidden sm:flex gap-5 pt-1.5">
+                <span><a href="">Docs</a></span>
+                <span><a href="">Updates</a></span>
+                <span><a href="">Blog</a></span>
+                <span><a href="">API</a></span>
+                <span><a href="">Extensions</a></span>
+                <span><a href="#">Contact</a></span>
+            </div>         
         </div>
-        <div>
-            <input class="bg-graay border-solid text-white px-4 py-2  text-sm" placeholder="Search..." type="text">
-            <button class="bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-700">Download</button>
+        <div class="hidden sm:flex justify-end">
+            <input class="bg-graay border border-gray rounded-md text-white px-4 py-2  text-sm" placeholder="Search..." type="text">
+            <button class="bg-blue-500 text-white mx-3 py-1 px-3 animate-pulse rounded hover:bg-blue-700">Download</button>
         </div>
     </div>
    
     <main class="p-4 lg:px-20 2xl:px-60">
-        <section class="text-center">
-            <h1 class="text-6xl font-bold">Your code editor. </h1>
-            <h1 class="text-6xl font-bold">Redefined with AI.</h1>
-            <div>
-                <button class="bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-700" >
+        <section class="text-center my-12">
+            <h1 class="text-7xl font-bold">Your code editor. </h1>
+            <h1 class="text-7xl font-bold">Redefined with AI.</h1>
+            <div class="mb-0 m-5">
+                <button class="bg-blue-500 text-lg text-white py-1 px-3 rounded hover:bg-blue-700" >
                     Download for Windows
                 </button>
-                <button class="bg-graay3 border-dotted-1 text-white py-1 px-3 rounded hover:bg-gray" >
+                <button class="bg-graay3 text-lg text-white py-1 px-3 rounded hover:bg-gray" >
                     Try Agent Mode
                 </button>
             </div>                
@@ -61,9 +66,18 @@
                 <a class="text-blue-400 text-xs underline decoration-solid " href="">Insiders</a>
             </div>
         </section>
+        
+        <div class="flex flex-col items-center my-12 p-8">
+            <div class="bg-[url(https://code.visualstudio.com/assets/home/hero-background.webp)] rounded-lg">
+                <video class="px-24 py-16" id="myVideo" src="https://code.visualstudio.com/assets/home/hero-dark-lg.webm" >
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <button class="bg-transparent text-xl text-center my-8 hover:border-4 rounded-lg border-gray" id="controlBtn">Pause</button>
+        </div>
 
-        <section class="text-left">
-            <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <section class="py-6 text-left my-12">
+            <div class="grid grid-cols-1 gap-10 p-8 md:grid-cols-3">
                 <div class="bg-graay2 border border-gray rounded-md p-4 ">
                     <h3 class="text-xl font-bold">Any model for any team</h3>
                     <p>Use AI models like Claude Sonnet out of the box, or bring your own key to access models from Azure, Anthropic, Google, Ollama, OpenAI, and OpenRouter.</p>
@@ -81,118 +95,124 @@
                 </div>
             </div>
         </section> 
+        
 
-        <div class="flex flex-col md:flex-row justify-evenly text-left">
-            <div class="">
-                <h2 class="text-2xl font-semibold">Agent mode</h2>
+        <div class="flex flex-col py-6 md:flex-row items-center my-12">
+            <div  class="md:w-1/3 px-8">
+                <h2 class="text-3xl font-semibold">Agent mode</h2>
                 <p>Tackle complex, multi-step tasks. Agent mode reads your codebase, suggests edits across files, runs terminal commands, and responds to compile or test failures — all in a loop until the job is done. Further refine agent mode to fit your team's workflows with VS Code extensions and Model Context Protocol (MCP) servers.</p>
                 <br><a class="text-blue-400 underline decoration-solid " href="">Build with agent mode</a>
             </div>
-            <div class="">
-                <img class="w-full md:w-80 h-48 object-cover" src="https://code.visualstudio.com/assets/home/swimlane-chat-dark.webp" alt="">
-            </div>
-        </div>
-        <div class="flex flex-col md:flex-row justify-evenly text-left">
-            <div class="ftext">
-                <h2 class="text-2xl font-semibold">Next Edit Suggestions</h2>
-                <p>VS Code predicts your next move as you code. Use the Tab key to accept AI-powered suggestions right in your editor. It intelligently recommends what to change — and where — based on the edits you're already making.</p>
-                <a class="text-blue-400 underline decoration-solid " href="">Code with AI-powered suggestions</a>
-            </div>
-            <div>
-                <img class="w-full md:w-80 h-48 object-cover" src="https://code.visualstudio.com/assets/home/swimlane-nes-dark.webp" alt="">
+            <div  class="md:w-2/3">
+                <img class=" p-10" src="https://code.visualstudio.com/assets/home/swimlane-chat-dark.webp" alt="">
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row items-start gap-12 my-12">
-            <div class="md:w-1/2">
-                <h2 class="text-2xl font-semibold mb-2">Code in any language</h2>
+        <div class="flex flex-col py-6 md:flex-row items-center my-12">
+            <div class="md:w-1/3 px-8">
+                <h2 class="text-3xl font-semibold">Next Edit Suggestions</h2>
+                <p>VS Code predicts your next move as you code. Use the Tab key to accept AI-powered suggestions right in your editor. It intelligently recommends what to change — and where — based on the edits you're already making.</p>
+                <a class="text-blue-400 underline decoration-solid " href="">Code with AI-powered suggestions</a>
+            </div>
+            <div  class="md:w-2/3">
+                <img class="p-10" src="https://code.visualstudio.com/assets/home/swimlane-nes-dark.webp" alt="">
+            </div>
+        </div>
+
+        <!-- coding language grid -->
+        <div class="flex flex-col py-6 md:flex-row items-center  my-12">
+            <div class="md:w-1/3 px-8">
+                <h2 class="text-3xl font-semibold mb-2">Code in any language</h2>
                 <p class="text-whitee2">
                     VS Code supports almost every major programming language. Several ship in the box, like JavaScript,
                     TypeScript, CSS, and HTML, but extensions for others can be found in the VS Code Marketplace.
                 </p>
             </div>
-            <div class="md:w-1/2">
-                <div class="grid items-center grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
+            <div class="md:w-2/3">
+                <div class="grid items-center grid-cols-2 p-10 lg:grid-cols-3 gap-y-4 gap-x-8">
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-js.png" alt="Javascript">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-js.png" alt="Javascript">
                         <code class="text-whitee2">JavaScript</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-ts.png" alt="TypeScript">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-ts.png" alt="TypeScript">
                         <code class="text-whitee2">TypeScript</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-python.png" alt="Python">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-python.png" alt="Python">
                         <code class="text-whitee2">Python</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-cs.png" alt="C#">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-cs.png" alt="C#">
                         <code class="text-whitee2">C#</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-cpp.png" alt="C++">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-cpp.png" alt="C++">
                         <code class="text-whitee2">C++</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-html.png" alt="HTML">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-html.png" alt="HTML">
                         <code class="text-whitee2">HTML</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-java.png" alt="Java">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-java.png" alt="Java">
                         <code class="text-whitee2">Java</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-json.png" alt="JSON">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-json.png" alt="JSON">
                         <code class="text-whitee2">JSON</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-php.png" alt="PHP">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-php.png" alt="PHP">
                         <code class="text-whitee2">PHP</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-markdown.png" alt="Markdown">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-markdown.png" alt="Markdown">
                         <code class="text-whitee2">Markdown</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-powershell.png" alt="Powershell">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-powershell.png" alt="Powershell">
                         <code class="text-whitee2">Powershell</code>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="w-6 h-6" src="https://code.visualstudio.com/assets/home/language-yaml.png" alt="YAML">
+                        <img class="w-10 h-10" src="https://code.visualstudio.com/assets/home/language-yaml.png" alt="YAML">
                         <code class="text-whitee2">YAML</code>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-evenly text-left">
-            <div class="ftext">
-                <h2 class="text-2xl font-semibold">Fully customizable</h2>
+        <div class="flex flex-col items-center py-6 md:flex-row my-12 xl:items-start">
+            <div class="md:w-1/3  p-10">
+                <h2 class="text-3xl font-semibold">Fully customizable</h2>
                 <p>Customize your VS Code UI and layout so that it fits your coding style.</p>
                 <br><p><a class="text-blue-400 underline decoration-solid ">Color Themes</a> let you modify the colors in VS Code's user interface to suit your preferences and work environment.</p>
                 <br><p><a class="text-blue-400 underline decoration-solid " href="">Settings Sync</a> enables you to share your user settings across your VS Code instances with the Settings Sync feature.</p>
             </div>
-            <div>
-                <img class="w-full md:w-80 h-48 object-cover" src="https://code.visualstudio.com/assets/home/swimlane-customized.png" alt="">
+            <div class="md:w-2/3">
+                <img class="p-10" src="https://code.visualstudio.com/assets/home/swimlane-customized.png" alt="">
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-evenly text-left">
-            <div class="ftext">
-                <h2 class="text-2xl font-semibold">Code anywhere</h2><br>
+        <div class="flex flex-col items-center py-6 md:flex-row my-12 xl:items-start">
+            <div class="md:w-1/3  p-10">
+                <h2 class="text-3xl font-semibold">Code anywhere</h2>
                 <p>Code wherever you're most productive, whether you're connected to the cloud, a remote repository, or in the browser with VS Code for the Web (vscode.dev).</p>
                 <br><p><a class="text-blue-400 underline decoration-solid ">Built-in Source Control</a> empowers you with Git support out-of-the-box. Many other source control providers are available through extensions.</p>
                 <br><p><a class="text-blue-400 underline decoration-solid " href="">GitHub Codespaces</a>  provides cloud-powered development environments for any activity - whether it's a long-term project, or a short-term task like reviewing a pull request.</p>
             </div>
-            <div>
-                <img class="w-full md:w-80 h-48 object-cover" src="https://code.visualstudio.com/assets/home/swimlane-anywhere.png" alt="">
+            <div class="md:w-2/3">
+                <img class="p-10" src="https://code.visualstudio.com/assets/home/swimlane-anywhere.png" alt="">
             </div>
         </div>
 
-        <div class="text-center">
-            <h2 class="text-2xl font-semibold">Code with rich features</h2>
-            <p>There's a lot more to an editor. Whether it's using built-in features or 
-            <p>rich extensions, there's something for everyone.</p>
+        <!-- last part -->
+        <div class="text-left p-8 md:text-center  my-12">
+            <div class="my-8">
+                <h2 class="text-3xl py-2 font-semibold">Code with rich features</h2>
+                <p>There's a lot more to an editor. Whether it's using built-in features or 
+                <p>rich extensions, there's something for everyone.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
                 <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
                     <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
@@ -244,7 +264,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-start gap-3 text-xs my-10">
+        <div class="flex justify-start px-8 gap-3 text-xs my-10">
             <div>Support </div>
             <div>Privacy </div>
             <div>Terms of use </div> 
@@ -252,5 +272,28 @@
         </div>
     </main>
     <span class="screen-widget"></span>
+    
+    <script>
+        const video = document.getElementById('myVideo');
+        const button = document.getElementById('controlBtn');
+
+        button.addEventListener('click', function () {
+        if (button.textContent === 'Pause') {
+            video.pause();
+            button.textContent = 'Play';
+        }else if(button.textContent === 'Play'){
+            video.play();
+            button.textContent = 'Pause';
+        } else if (button.textContent === 'Replay') {
+            video.currentTime = 0;
+            video.play();
+            button.textContent = 'Pause';
+        }
+        });
+
+        video.addEventListener('ended', function () {
+        button.textContent = 'Replay';
+        });
+    </script>
 </body>
 </html>
