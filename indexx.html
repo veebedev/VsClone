@@ -23,33 +23,54 @@
             },
           },
         }
-        
     </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="text-whitee bg-graay ">
-    <div class="sticky top-0 bg-graay flex flex-col justify-between border-b border-[#333] p-3 lg:px-20 lg:flex-row 2xl:px-60">
-        <div class="flex gap-5">
-            <div class="flex gap-5 pt-1.5">
-                <img class="w-5 h-5" src="https://code.visualstudio.com/favicon.ico"/>
-                <span class="text-md font-bold"> Visual Studio Code</span>
+    <div  id="navbar" class="sticky top-0 bg-graay flex flex-col justify-between p-4 lg:px-20 min-[1200px]:flex-row 2xl:px-60">
+        <div class="flex gap-5 px-8 text-md xl:text-lg">
+            <div class="flex gap-2 pt-1.5">
+                <img class="w-5 h-5 xl:w-6 xl:h-6" src="https://code.visualstudio.com/favicon.ico"/>
+                <span class="font-bold"> Visual Studio Code</span>
             </div>
-            <div class="hidden sm:flex gap-5 pt-1.5">
+            <div class="hidden lg:flex gap-5 pt-1.5">
                 <span><a href="">Docs</a></span>
                 <span><a href="">Updates</a></span>
                 <span><a href="">Blog</a></span>
                 <span><a href="">API</a></span>
                 <span><a href="">Extensions</a></span>
                 <span><a href="#">Contact</a></span>
-            </div>         
+            </div> 
+                    
         </div>
-        <div class="hidden sm:flex justify-end">
-            <input class="bg-graay border border-gray rounded-md text-white px-4 py-2  text-sm" placeholder="Search..." type="text">
-            <button class="bg-blue-500 text-white mx-3 py-1 px-3 animate-pulse rounded hover:bg-blue-700">Download</button>
+        <div class="flex justify-end">
+            <div class="hidden lg:flex  px-8">
+                <div class="bg-graay border border-gray rounded-md text-white px-4 py-2  text-sm">
+                    <input class="bg-graay" placeholder="Search..." type="text">
+                </div>
+                <button class="bg-blue-500 text-white ml-3 py-1 px-3 animate-pulse rounded hover:bg-blue-700">Download</button>
+            </div>
+            <button id="mobileMenuBtn" class="lg:hidden bg-graay3 text-white px-4 py-2 rounded">Menu</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-graay2 border-t border-gray">
+            <div class="flex flex-col p-4">
+                <a href="" class="py-2">Docs</a>
+                <a href="" class="py-2">Updates</a>
+                <a href="" class="py-2">Blog</a>
+                <a href="" class="py-2">API</a>
+                <a href="" class="py-2">Extensions</a>
+                <a href="#" class="py-2">Contact</a>
+                <div class="mt-4">
+                    <input class="w-full bg-graay border border-gray rounded-md text-white px-4 py-2 text-sm" placeholder="Search..." type="text">
+                </div>
+                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">Download</button>
+            </div>
         </div>
     </div>
    
     <main class="p-4 lg:px-20 2xl:px-60">
+        <!-- hero section -->
         <section class="text-center my-12">
             <h1 class="text-7xl font-bold">Your code editor. </h1>
             <h1 class="text-7xl font-bold">Redefined with AI.</h1>
@@ -69,14 +90,15 @@
         
         <div class="flex flex-col items-center my-12 p-8">
             <div class="bg-[url(https://code.visualstudio.com/assets/home/hero-background.webp)] rounded-lg">
-                <video class="px-24 py-16" id="myVideo" src="https://code.visualstudio.com/assets/home/hero-dark-lg.webm" >
+                <video class="px-24 py-16" id="myVideo" src="https://code.visualstudio.com/assets/home/hero-dark-lg.webm" autoplay muted>
                     Your browser does not support the video tag.
                 </video>
             </div>
             <button class="bg-transparent text-xl text-center my-8 hover:border-4 rounded-lg border-gray" id="controlBtn">Pause</button>
         </div>
 
-        <section class="py-6 text-left my-12">
+        <!-- ai features -->
+        <section class="py-6 my-12">
             <div class="grid grid-cols-1 gap-10 p-8 md:grid-cols-3">
                 <div class="bg-graay2 border border-gray rounded-md p-4 ">
                     <h3 class="text-xl font-bold">Any model for any team</h3>
@@ -104,7 +126,7 @@
                 <br><a class="text-blue-400 underline decoration-solid " href="">Build with agent mode</a>
             </div>
             <div  class="md:w-2/3">
-                <img class=" p-10" src="https://code.visualstudio.com/assets/home/swimlane-chat-dark.webp" alt="">
+                <img class=" px-8" src="https://code.visualstudio.com/assets/home/swimlane-chat-dark.webp" alt="">
             </div>
         </div>
 
@@ -115,7 +137,7 @@
                 <a class="text-blue-400 underline decoration-solid " href="">Code with AI-powered suggestions</a>
             </div>
             <div  class="md:w-2/3">
-                <img class="p-10" src="https://code.visualstudio.com/assets/home/swimlane-nes-dark.webp" alt="">
+                <img class="px-8" src="https://code.visualstudio.com/assets/home/swimlane-nes-dark.webp" alt="">
             </div>
         </div>
 
@@ -183,26 +205,26 @@
         </div>
 
         <div class="flex flex-col items-center py-6 md:flex-row my-12 xl:items-start">
-            <div class="md:w-1/3  p-10">
+            <div class="md:w-1/3  p-8">
                 <h2 class="text-3xl font-semibold">Fully customizable</h2>
                 <p>Customize your VS Code UI and layout so that it fits your coding style.</p>
                 <br><p><a class="text-blue-400 underline decoration-solid ">Color Themes</a> let you modify the colors in VS Code's user interface to suit your preferences and work environment.</p>
                 <br><p><a class="text-blue-400 underline decoration-solid " href="">Settings Sync</a> enables you to share your user settings across your VS Code instances with the Settings Sync feature.</p>
             </div>
             <div class="md:w-2/3">
-                <img class="p-10" src="https://code.visualstudio.com/assets/home/swimlane-customized.png" alt="">
+                <img class="p-8" src="https://code.visualstudio.com/assets/home/swimlane-customized.png" alt="">
             </div>
         </div>
 
         <div class="flex flex-col items-center py-6 md:flex-row my-12 xl:items-start">
-            <div class="md:w-1/3  p-10">
+            <div class="md:w-1/3  p-8">
                 <h2 class="text-3xl font-semibold">Code anywhere</h2>
                 <p>Code wherever you're most productive, whether you're connected to the cloud, a remote repository, or in the browser with VS Code for the Web (vscode.dev).</p>
                 <br><p><a class="text-blue-400 underline decoration-solid ">Built-in Source Control</a> empowers you with Git support out-of-the-box. Many other source control providers are available through extensions.</p>
                 <br><p><a class="text-blue-400 underline decoration-solid " href="">GitHub Codespaces</a>  provides cloud-powered development environments for any activity - whether it's a long-term project, or a short-term task like reviewing a pull request.</p>
             </div>
             <div class="md:w-2/3">
-                <img class="p-10" src="https://code.visualstudio.com/assets/home/swimlane-anywhere.png" alt="">
+                <img class="p-8" src="https://code.visualstudio.com/assets/home/swimlane-anywhere.png" alt="">
             </div>
         </div>
 
@@ -213,58 +235,82 @@
                 <p>There's a lot more to an editor. Whether it's using built-in features or 
                 <p>rich extensions, there's something for everyone.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-                <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
-                    <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
-                    <h3 class="text-md font-semibold mb-1">Integrated Terminal</h3>
-                    <p>Use your favorite shell whether it's zsh, pwshr or git bash, all inside the
-                        editor.</p>
-                </div>
-                <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
-                    <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
-                    <h3 class="text-md font-semibold mb-1">Integrated Terminal</h3>
-                    <p>Use your favorite shell whether it's zsh, pwshr or git bash, all inside the
-                        editor.</p>
-                </div>
-                <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
-                    <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
-                    <h3 class="text-md font-semibold mb-1">Integrated Terminal</h3>
-                    <p>Use your favorite shell whether it's zsh, pwshr or git bash, all inside the
-                        editor.</p>
-                </div>
-                <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
-                    <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
-                    <h3 class="text-md font-semibold mb-1">Integrated Terminal</h3>
-                    <p>Use your favorite shell whether it's zsh, pwshr or git bash, all inside the
-                        editor.</p>
-                </div>
-                <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
-                    <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
-                    <h3 class="text-md font-semibold mb-1">Integrated Terminal</h3>
-                    <p>Use your favorite shell whether it's zsh, pwshr or git bash, all inside the
-                        editor.</p>
-                </div>
-                <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
-                    <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
-                    <h3 class="text-md font-semibold mb-1">Integrated Terminal</h3>
-                    <p>Use your favorite shell whether it's zsh, pwshr or git bash, all inside the
-                        editor.</p>
-                </div>
-                <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
-                    <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
-                    <h3 class="text-md font-semibold mb-1">Integrated Terminal</h3>
-                    <p>Use your favorite shell whether it's zsh, pwshr or git bash, all inside the
-                        editor.</p>
-                </div>
-                <div class="bg-graay2 border border-gray rounded-lg p-6 mr-4 my-5 text-left">
-                    <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3 "><img class="w-6 h-6"src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt=""></div>
-                    <h3 class="text-md font-semibold mb-1">Integrated Terminal</h3>
-                    <p>Use your favorite shell whether it's zsh, pwshr or git bash, all inside the
-                        editor.</p>
-                </div>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 ">
+                <a href="#" class="block">
+                    <div class="bg-graay2 border border-gray rounded-lg p-6 text-left transition-all duration-300 hover:scale-[1.02]">
+                        <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3">
+                            <img class="w-6 h-6" src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt="">
+                        </div>
+                        <h3 class="text-md font-semibold mb-2">Integrated Terminal</h3>
+                        <p class="text-sm">Use your favorite shell whether it's zsh, pwshr or git bash, all inside the editor.</p>
+                    </div>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-graay2 border border-gray rounded-lg p-6 text-left transition-all duration-300 hover:scale-[1.02]">
+                        <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3">
+                            <img class="w-6 h-6" src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt="">
+                        </div>
+                        <h3 class="text-md font-semibold mb-2">Integrated Terminal</h3>
+                        <p class="text-sm">Use your favorite shell whether it's zsh, pwshr or git bash, all inside the editor.</p>
+                    </div>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-graay2 border border-gray rounded-lg p-6 text-left transition-all duration-300 hover:scale-[1.02]">
+                        <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3">
+                            <img class="w-6 h-6" src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt="">
+                        </div>
+                        <h3 class="text-md font-semibold mb-2">Integrated Terminal</h3>
+                        <p class="text-sm">Use your favorite shell whether it's zsh, pwshr or git bash, all inside the editor.</p>
+                    </div>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-graay2 border border-gray rounded-lg p-6 text-left transition-all duration-300 hover:scale-[1.02]">
+                        <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3">
+                            <img class="w-6 h-6" src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt="">
+                        </div>
+                        <h3 class="text-md font-semibold mb-2">Integrated Terminal</h3>
+                        <p class="text-sm">Use your favorite shell whether it's zsh, pwshr or git bash, all inside the editor.</p>
+                    </div>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-graay2 border border-gray rounded-lg p-6 text-left transition-all duration-300 hover:scale-[1.02]">
+                        <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3">
+                            <img class="w-6 h-6" src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt="">
+                        </div>
+                        <h3 class="text-md font-semibold mb-2">Integrated Terminal</h3>
+                        <p class="text-sm">Use your favorite shell whether it's zsh, pwshr or git bash, all inside the editor.</p>
+                    </div>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-graay2 border border-gray rounded-lg p-6 text-left transition-all duration-300 hover:scale-[1.02]">
+                        <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3">
+                            <img class="w-6 h-6" src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt="">
+                        </div>
+                        <h3 class="text-md font-semibold mb-2">Integrated Terminal</h3>
+                        <p class="text-sm">Use your favorite shell whether it's zsh, pwshr or git bash, all inside the editor.</p>
+                    </div>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-graay2 border border-gray rounded-lg p-6 text-left transition-all duration-300 hover:scale-[1.02]">
+                        <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3">
+                            <img class="w-6 h-6" src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt="">
+                        </div>
+                        <h3 class="text-md font-semibold mb-2">Integrated Terminal</h3>
+                        <p class="text-sm">Use your favorite shell whether it's zsh, pwshr or git bash, all inside the editor.</p>
+                    </div>
+                </a>
+                <a href="#" class="block">
+                    <div class="bg-graay2 border border-gray rounded-lg p-6 text-left transition-all duration-300 hover:scale-[1.02]">
+                        <div class="inline-block mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-graay3">
+                            <img class="w-6 h-6" src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg" alt="">
+                        </div>
+                        <h3 class="text-md font-semibold mb-2">Integrated Terminal</h3>
+                        <p class="text-sm">Use your favorite shell whether it's zsh, pwshr or git bash, all inside the editor.</p>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="flex justify-start px-8 gap-3 text-xs my-10">
+        <div class="flex justify-start px-8 gap-3 my-10 text-md xl:text-sm">
             <div>Support </div>
             <div>Privacy </div>
             <div>Terms of use </div> 
@@ -276,8 +322,25 @@
     <script>
         const video = document.getElementById('myVideo');
         const button = document.getElementById('controlBtn');
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-        button.addEventListener('click', function () {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            
+            if (scrollTop > 10) {
+                navbar.classList.add('border-b', 'border-[#333]');
+            } else {
+                navbar.classList.remove('border-b', 'border-[#333]');
+            }
+        });
+
+        button.addEventListener('click', () => {
         if (button.textContent === 'Pause') {
             video.pause();
             button.textContent = 'Play';
@@ -291,7 +354,7 @@
         }
         });
 
-        video.addEventListener('ended', function () {
+        video.addEventListener('ended', () => {
         button.textContent = 'Replay';
         });
     </script>
